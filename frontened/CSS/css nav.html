@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Navigation property</title>
+	<style>
+		a {
+			color: white;
+			background-color: #990;
+			text-decoration: none;
+		}
+
+		nav {
+			background: #333;
+		}
+
+		nav ul {
+			margin: 0 auto;
+			width: 80px;
+		}
+
+		nav ul li {
+			display: block;
+			float: left;
+			margin-left: -40px;
+			position: relative;
+		}
+
+		nav ul a {
+			display: block;
+			float: left;
+			width: 150px;
+			padding: 10px 20px;
+		}
+
+		nav ul a:hover {
+			background: #090;
+		}
+
+		nav ul li ul li {
+			float: none;
+		}
+
+		nav ul li ul {
+			display: none;
+			position: absolute;
+			background: #333;
+			top: 42px;
+		}
+
+		nav ul li:hover>ul {
+			display: block;
+		}
+
+		nav ul li a {
+			display: block;
+		}
+
+		.gfg {
+			font-size: 40px;
+			font-weight: bold;
+			color: #009900;
+			Text-align: center;
+		}
+
+		p {
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="gfg">nav</div>
+	<p>Dropdown Navigation property</p>
+	<nav>
+		<ul>
+			<li class="Lev-1">
+				<a href="">Level-1</a>
+				<ul>
+					<li><a href="">Link 1</a></li>
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 3</a></li>
+					<li><a href="">Link 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</body>
+
+</html>
