@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Concepts</title>
+  <style>
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 1. Accessing Elements -->
+<h1 id="mainTitle">Hello, DOM!</h1>
+<p class="content">This is a paragraph.</p>
+
+<script>
+  // 1. Accessing Elements
+  console.log('1. Accessing Elements:');
+  let titleElement = document.getElementById('mainTitle');
+  console.log(titleElement.textContent);
+
+  let paragraphElements = document.getElementsByClassName('content');
+  for (let i = 0; i < paragraphElements.length; i++) {
+    console.log(paragraphElements[i].textContent);
+  }
+
+  // 2. Modifying Elements
+  console.log('\n2. Modifying Elements:');
+  titleElement.textContent = 'Updated Title';
+  paragraphElements[0].innerHTML = 'This paragraph is <span class="highlight">updated</span>.';
+
+  // 3. Creating Elements
+  console.log('\n3. Creating Elements:');
+  let newElement = document.createElement('p');
+  newElement.textContent = 'This is a new paragraph.';
+  document.body.appendChild(newElement);
+
+  // 4. Event Handling
+  console.log('\n4. Event Handling:');
+  titleElement.addEventListener('click', function () {
+    alert('Title Clicked!');
+  });
+
+  // 5. Style Manipulation
+  console.log('\n5. Style Manipulation:');
+  titleElement.style.color = 'blue';
+
+  // 6. Traversing the DOM
+  console.log('\n6. Traversing the DOM:');
+  let parentElement = titleElement.parentElement;
+  console.log(parentElement.tagName);
+
+  let nextElement = titleElement.nextElementSibling;
+  console.log(nextElement.textContent);
+
+  // 7. Removing Elements
+  console.log('\n7. Removing Elements:');
+  setTimeout(function () {
+    document.body.removeChild(newElement);
+  }, 3000);
+</script>
+
+</body>
+</html>
