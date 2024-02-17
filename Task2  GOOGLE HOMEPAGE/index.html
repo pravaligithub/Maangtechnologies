@@ -1,0 +1,155 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/493445350a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Final - Google Clone</title>
+  </head>
+  <body>
+    <!-- Header Starts -->
+    <div class="header">
+      <div class="header__left">
+        <a href="#">About</a>
+        <a href="#">Store</a>
+      </div>
+      <div class="header__right">
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <div class="menu">
+        <span class="material-icons header__apps " style="cursor: pointer;"> apps </span></button></a>
+        </div>
+        <button class="button">Sign in</button>
+      </div> 
+    </div> 
+    <!-- Header Ends -->
+    <!-- Main Body Starts-->
+<div class="nav">
+  <div class="mainBody">
+    <img
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      alt="Google Logo"
+    />
+    <!-- Search Starts -->
+    <div class="search">
+      <div class="search__input">
+        <span class="material-icons"> search </span>
+        <input type="text" />
+        <span class="material-icons"> mic </span>
+      </div>
+      <div class="search__buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button><br>
+       <!--Google offered in: हिन्दी বাংলা తెలుగు मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ-->
+      </div>
+      <div class="lang">
+        Google offered in:
+        <a href="#">हिन्दी</a>
+        <a href="#">বাংলা</a>
+        <a href="#">తెలుగు</a>
+        <a href="#">मराठी</a>
+        <a href="#">தமிழ்</a>
+        <a href="#">ગુજરાતી</a>
+        <a href="#">ಕನ್ನಡ</a>
+        <a href="#">മലയാളം</a>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="icons" >
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\google.jpeg" alt="img"/>
+       <span class="text" >Search</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\utube.png" alt="img"/>
+       <span class="text" >youtube</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\play.jpeg" alt="img"/>
+       <span class="text" >Playstore</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\cal.png" alt="img"/>
+       <span class="text" >calender</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\drive.png" alt="img"/>
+       <span class="text" >drive</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\meet.png" alt="img"/>
+       <span class="text" >meet</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\cal.png" alt="img"/>
+       <span class="text" >calender</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\map.png" alt="img"/>
+       <span class="text" >Maps</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\mail.png" alt="img"/>
+       <span class="text" >mail</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\keep.png" alt="img"/>
+       <span class="text" >keep</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\sheet.png" alt="img"/>
+       <span class="text" >sheet</span>
+      </div>
+      <div class="icon">
+       <img src="C:\Users\Pravallika\Downloads\classroom.png" alt="img"/>
+       <span class="text" >classroom</span>
+      </div>
+      <div class="icon">
+        <img src="C:\Users\Pravallika\Downloads\meet.png" alt="img"/>
+        <span class="text" >meet</span>
+       </div>
+       <div class="icon">
+        <img src="C:\Users\Pravallika\Downloads\Map.png" alt="img"/>
+        <span class="text" >Maps</span>
+       </div>
+       <div class="icon">
+        <img src="C:\Users\Pravallika\Downloads\drive.png" alt="img"/>
+        <span class="text" >drive</span>
+       </div>
+     </div>
+    </div>
+      <!-- Search Ends --> 
+    <!-- Main Body Ends -->
+<footer>
+  <h4>india</h4>
+  <div class="links">
+    <div class="link-1">
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">About</a>
+      <a href="#">How Search works</a>
+    </div>
+    <div class="link-2">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </div>
+</footer>
+<script> 
+$(document).ready(function(){
+  $(".menu").click(function(){
+    console.log("clicked");
+    $(".icons").toggle('hidden');
+  });
+});
+
+</script>
+  </body>
+</html>
