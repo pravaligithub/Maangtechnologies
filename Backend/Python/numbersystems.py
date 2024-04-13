@@ -1,0 +1,22 @@
+#physical addess-binary,decimal,hexa decimal
+print(bin(25))
+print(bin(4))
+print(0b011)
+print(oct(25))
+print(hex(25))
+a=2
+b=3
+a,b=b,a
+print(a,b)
+x=3
+y=5
+t=x
+x=y
+y=t
+print(x,y)
+p=5
+q=7
+p=p+q
+q=p-q
+p=p-q
+print(p,q)

@@ -1,0 +1,19 @@
+#Lists-mutables-change elements,add,delete elements
+nums=[1,2,3,4]
+print(nums[0])
+print(nums[-1])
+print(nums)
+names=['pravali','ishu']
+print(names)
+print([nums,names])
+names.append("kusuma")
+print(names)
+names.remove("pravali")
+print(names)
+names.pop(1)
+print(names)
+names.append("jelly")
+names.append("kusuma")
+print(names)
+names.extend(["rupa","vani"])
+print(names)
