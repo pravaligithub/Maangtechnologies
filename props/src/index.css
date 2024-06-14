@@ -1,0 +1,13 @@
+
+.student {
+  font-family: Arial, sans-serif;
+  font-weight: 50;
+  font-size: 2em;
+  color: #646cff;
+  text-decoration: inherit;
+  padding:10px;
+  border:1px solid black;
+}
+.student p{
+  margin: 0;
+}
