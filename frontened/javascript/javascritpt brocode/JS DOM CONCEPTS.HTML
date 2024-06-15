@@ -1,0 +1,26 @@
+<!-- 
+    DOM- Document object model
+    object{} that represents the page you see in the webbrowser
+     and provides you with an API to insert with it
+     web browser constructs the DOM when it loads an HTML document and structure all the 
+     elements in a tree like representation.
+     javascript can access the DOM to dynamically change the content,structure and style of a webpage.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="welcome">Welcome</h1>
+<script>
+const username="Brocode";
+
+const welcomes = document.getElementById("welcome");
+welcomes.textcontent+=username === ""? `Guest` :username;
+console.dir(document);
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller Program</title>
+    <style>
+       #container{
+        font-family: Arial,sans-serif;
+        text-align:center;
+        color:black;
+        font-size:2em;
+        font-weight:bold; 
+       }
+       button{
+        font-size:1.5 em;
+        padding:10px 15px;
+        border-radius:10px;
+        border:None;
+        background-color:blue;
+        color:white;
+        font-weight:bold;
+        cursor:pointer;
+       }
+       button:hover{
+        background-color: blueviolet;
+       }
+       button:active{
+        background-color: blueviolet;
+       }
+       input{
+
+        font-size: 2em;
+        width:150px;
+        text-align:center;
+        font-weight:bold;
+
+       }
+       #diceResult{
+        margin:25px;
+       }
+       #diceImages img{
+        width: 150px;
+        margin: 5px;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Dice Roller</h1>
+        <label># of dice:</label>
+        <input type="number" id="numOfDice" value="1" min="1">
+        <button onclick="rollDice()">Roll Dice</button>
+        <div id="diceResult"></div>
+        <div id="diceImages"></div>
+
+    </div>
+<script>
+function rollDice(){
+const numOfDice = document.getElementById("numOfDice").value;
+const diceResult = document.getElementById("diceResult");
+const diceImages = document.getElementById("diceImages");
+const values = [];
+const images = [];
+for(let i = 0; i < numOfDice; i++){
+    const value = Math.floor(Math.random() * 6) + 1;
+    values.push(value);
+    images.push(`<img src="C:\Users\Pravallika\Desktop\javascritpt brocode\Dice\.png">`);
+}
+diceResult.textContent = `dice: ${values.join(', ')}`;
+diceImages.innerHTML = images.join('');
+}
+
+    /*      function rollDice(){
+            const numOfDice = document.getElementById("numOfDice").value;
+            const diceResult=document.getElementById("diceResult");
+            const diceImages=documentgetElementById("diceImages");
+            const values=[];
+            const images=[];
+
+            for (let i=0; i<numOfDice.length; i++){
+
+              const value =  Math.floor(Math.random()*6)+1;
+
+              values.push(value);
+
+              images.push('<img src="C:\Users\Pravallika\Desktop\javascritpt brocode/dice/${value}.png" alt="dice ${value}">');
+
+        
+            }
+            diceResult.textConetnt= 'dice: ${values.join(' ,')}';
+            diceImages.innerHTML=images.join(' ');
+          } */
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            background-color:palevioletred;
+        }
+        #myH1{
+            font-size:4rem;
+            font-weight: bold;
+            font-family:"Arial",sans-serif;
+            color:hsl(0,0%,25%);
+        }
+        #container{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:30px;
+            border:5px solid;
+            border-radius:50px;
+            border-color: green;
+            background-color:yellow;
+        }
+        #display{
+            font-size:5rem;
+            font-family: monospace;
+            font-weight: bold;
+            color:red;
+            text-shadow:2px 2px 2px grey;
+            margin-bottom:25px;
+        }
+        #controls button{
+            font-size:1.5rem;
+            font-weight: bold;
+            padding:10px 20px;
+            margin:5px;
+            min-width:125px;
+            border:none;
+            cursor:pointer;
+            color:white;
+            transition: background-color 0.5s ease;
+        }
+        #startBtn{
+            background-color:rgb(9, 243, 9);
+        }
+        #startBtn:hover{
+            background-color:rgb(11, 193, 234);
+        }
+        #stopBtn{
+            background-color:rgb(252, 22, 10);
+        }
+        #stopBtn:hover{
+            background-color:rgb(38, 12, 233);
+        }
+        #resetBtn{
+            background-color:rgb(9, 243, 9);
+        }
+        #resetBtn:hover{
+            background-color:rgb(21, 32, 229);
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <div id="myH1">StopWatch</div>
+    <div id="container">
+        <div id="display">00:00:00:00</div>
+    <div id="controls">
+        <button id="startBtn" onclick="start()">Start</button>
+        <button id="stopBtn" onclick="stop()">Stop</button>
+        <button id="resetBtn" onclick="reset()">Reset</button>
+    </div>
+
+    </div>
+<script>
+    /*
+const display =  document.getElementById("display");
+let timer=null;
+let startTime=0;
+let elapsedTime = 0;
+let isRunning=false;
+
+function start(){
+    if(!isRunning){
+        startTime=Dtae.now()-elapsedTime;
+        timer = setInterval(update,10);
+        isRunning = true;
+    }
+    console.log(startTime);
+}
+
+function stop(){
+      if(isRunning){
+        clearInterval(timer);
+        elapsedTime=Date.now()-startTime;
+        isRunning=false;
+      }
+}
+
+function reset(){
+       clearInterval(timer);
+       startTime=0;
+       elapsedTime=0;
+       isRunning=false;
+       display.textContent="00:00:00:00";
+}
+function update(){
+        const currentTime =Date.now();
+        elapsedTime =currentTime-startTime;
+        let hours = Math.floor(elapsedTime/(1000*60*60));
+        let minutes =Math.floor(elapsedTime/(1000*60)%60);
+        let seconds =Math.floor(elapsedTime/1000%60);
+        let milliseconds=Math.floor(elapsed%1000/10);
+        hours = String(hours).padStart(2, "0");
+minutes = String(minutes).padStart(2, "0");
+seconds = String(seconds).padStart(2, "0");
+milliseconds = String(milliseconds).padStart(2, "0");
+display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+}
+
+
+*/
+
+const display = document.getElementById("display");
+let timer = null;
+let startTime = 0;
+let elapsedTime = 0;
+let isRunning = false;
+function start(){
+    if(!isRunning){
+        startTime = Date.now() - elapsedTime;
+        timer = setInterval(update, 10);
+        isRunning = true;
+    }
+}
+function stop(){
+    if(isRunning){
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false;
+    }
+}
+function reset(){
+    clearInterval(timer);
+    startTime = 0;
+    elapsedTime = 0;
+    isRunning = false;    
+    display.textContent = "00:00:00:00";
+}
+function update(){
+    const currentTime = Date.now();
+    elapsedTime = currentTime - startTime;
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
+    let seconds = Math.floor(elapsedTime / 1000 % 60);
+    let milliseconds = Math.floor(elapsedTime % 1000 / 10);
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+    milliseconds = String(milliseconds).padStart(2, "0");
+    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+
+}
+</script>
+    </body>
+</body>
+</html>

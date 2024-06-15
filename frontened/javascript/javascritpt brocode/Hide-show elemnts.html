@@ -1,0 +1,51 @@
+<!-- 
+    classList - Element property in js used to interact with an element list of classes
+    Allow you to make reusable classes for many elements.
+
+    add()
+    remove()
+    toggle(Remove if present,Add if not)
+    replace(oldclass,newClass)
+    contains()
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            font-size:4rem;
+            margin:10px;
+            border:none;
+            border-radius: 5px;
+            padding:10px;
+        }
+        .enabled{
+            background-color: blue;
+            color:white;
+        }
+        .hover{
+            box-shadow:rgb(23, 22, 22);
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<button id="button">mybutton</button>
+    <script>
+const button= document.getElementById("button");
+//button.classList.add("enabled");
+//button.classList.remove("enabled");
+button.addEventListener("mouseover",function(event){
+    event.target.classList.toggle("hover");
+});
+button.addEventListener("mouseout",function(event){
+    event.target.classList.remove("hover");
+});
+</script>
+</body>
+</html>

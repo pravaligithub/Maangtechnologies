@@ -1,0 +1,68 @@
+<!-- 
+    synchronous = Execute line by line consecutively in a 
+    sequential manner code that waits for an operation to complete
+
+    asynchronous=
+    Allows multiple operations to be performed concurrently without waiting
+    Doesnot block the execution flow and allows the program to continue(I/O operations,network request,fetching data)
+    Handled with:Callbacks,promises,Asyn/Await.
+
+    Error=An object that is created to represent a problem 
+    that occurs often with user input or establishing a conncetion.
+
+    try{}=Encloses code that might potentially cause an error
+    catch{}=Catch and handle any thrown Errors from tyr{}
+    fsinally{}=(optional)Always executes.Used mostly or clean up 
+              ex.close files,close connections,release resources.
+
+try{
+    console.log("Hello");
+    //Network Errors
+    //promise rejection
+    //Security Errors
+}
+catch(error){
+    console.log(error);
+}
+finally{
+    //close files
+    //close connections//release resources
+    console.log("This is always execution");
+}
+console.log("you have reached the end");
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    try{
+    const dividend = Number(window.prompt("Enter a dividend:"));
+    const divisor = Number(window.prompt("Enter a divisor:"));
+
+if(divisor == 0){
+    throw new Error("You cant divide by zero");
+}
+
+if(isNaN(dividend)|| isNaN(divisor)){
+    throw new Error("values must be a number");
+}
+
+const result=dividend/divisor;
+console.log(result);
+}
+catch(error){
+    console.error(error);
+}
+
+console.log("you have reached the end");
+ </script>   
+</body>
+</html>
+
+

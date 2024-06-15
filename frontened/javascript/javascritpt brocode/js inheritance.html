@@ -1,0 +1,78 @@
+<!-- 
+    inheritance - allows a newclass to inherit properties and methods from an existing class(parent -> child)
+    helps with code reusability
+-->
+
+<!-- 
+    super=keyword is used on classes to call the 
+    constructor or access the properties and methods of a parent(Superclass)
+    this=this object
+    super=the parent
+    extend the parent method
+-->
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title></head><body>
+        <script>
+/*class Animal{
+           alive = true;
+      }
+eat() 
+{
+console.log("this is",this.name);
+}
+sleep()
+{
+console.log(this.name);
+}
+class Rabbit extends Animal{
+name="rabbit";
+}
+    class Fish extends Animal{
+        name="fish";
+    } 
+    const rabbit=new Rabbit();
+    console.log(Rabbit.alive);
+    rabbit.eat();
+*/
+class Animal{
+    constructor(){
+}
+}
+class Rabbit extends Animal{
+    constructor(name,age,runSpeed){
+        super();
+        this.name=name;
+        this.age=age;
+        this.runSpeed = runSpeed;
+    }
+    run(){
+        console.log(this.name);
+    }
+}
+class Fish extends Animal{
+    constructor(name,age,swimSpeed){
+        super(name);
+        this.name=name;
+        this.age=age;
+        this.swimSpeed = swimSpeed;
+    }
+    swim(){
+        console.log(this.age);
+    }
+}
+const rabbit=new Rabbit("pravali",1,30);
+const fis=new Fish("ishu",2,35);
+
+console.log(fis);
+console.log(rabbit);
+console.log(fis.name);
+
+Fish.swim();
+    
+</script>
+</body>
+</html>

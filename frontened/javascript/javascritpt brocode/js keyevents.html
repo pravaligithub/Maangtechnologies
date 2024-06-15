@@ -1,0 +1,64 @@
+<!-- 
+    eventListener = listen for specific events to create interactive webpages
+    events:click,mouseover,mouseout
+    .addEventListener(event,changecolor)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myBox{
+             background-color: aqua;
+             color:black;
+             width:300px;
+             height:300px;
+             font-size: 4.5rem;
+             font-weight: bold;
+             display:flex;
+             align-items: center;
+             text-align: center;
+
+        }
+    #myButton{
+        font-size:20px;
+        padding:2px;
+        background-color: blue;
+        color:white;
+        width:300px;
+        height:50px;
+        font-family: bold;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="myBox">
+        Click Me🥰
+        </div>
+    <button id="myButton">Click</button>
+    <script>
+
+const myBox=document.getElementById("myBox");
+const myButton=document.getElementById("myButton");
+
+myButton.addEventListener("click",function changeColor(event){
+    myBox.style.backgroundColor="tomato";
+    myBox.textContent="Ouch!😎";
+   // consolelog(event);
+});
+myButton.addEventListener("mouseover",function changeColor(event){
+    myBox.style.backgroundColor="yellow";
+    myBox.textContent="dont do it😅"; 
+});
+myButton.addEventListener("mouseout",function changeColor(event){
+    myBox.style.backgroundColor="red";
+    myBox.textContent="click me🤩";
+  
+});
+
+    </script>
+</body>
+</html>

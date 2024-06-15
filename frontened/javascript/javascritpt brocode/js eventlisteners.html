@@ -1,0 +1,76 @@
+<!-- 
+    event listener = listen for specific events to create interactive webpages 
+    events:keydown,keyup
+    document.addEventListener(event,callback)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        #box{
+            background-color: skyblue;
+            width:200px;
+            height:200px;
+            font-size:7.5rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        🤣
+    </div>
+    <script>
+const boxs=document.getElementById("box");
+
+    document.addEventListener("keydown",function(event){
+        boxs.textContent="😋";
+        boxs.style.backgroundcolor = "tomato";
+    });
+    document.addEventListener("keyup",function(event){
+        boxs.textContent="😆";
+        boxs.style.backgroundcolor= "blue";
+    });
+const box=document.getElementById("box");
+const moveAmount=100;
+let x=0;
+let y=0;
+document.addEventListener("keydown",function(event){
+
+    if(event.key.startsWith("Arrow")){
+
+    event.preventDefault();
+
+        switch(event.key){
+            case "ArrowUp":
+                y -=moveAmount;
+                break;
+            case "ArrowDown":
+                y +=moveAmount;
+                break;
+            case "ArrowLeft":
+                x -=moveAmount;
+                break;
+            case "ArrowRight":
+                x +=moveAmount;
+                break;
+
+        }
+        box.style.top=`${y}px`;
+        box.style.left=`${x}px`;
+       // box.style.down=`${y}px`;
+      //  box.style.right=`${x}px`;  
+    }
+});
+</script>
+</body>
+</html>

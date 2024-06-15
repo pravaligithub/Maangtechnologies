@@ -1,0 +1,47 @@
+<!--callback= a function that is passes as an argument to another function               
+used to handle a synchronous operation:
+1.reading a file
+2.Network  requests
+3.Interacting with databases
+"Hey,when you are done,call this next"
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*       hello(wait);
+
+        function hello(callback){
+            console.log("Hello");
+            callback();
+        }
+        function wait(){
+            console.log("wait");
+        }
+
+        function leave(){
+            console.log('leave');
+        }
+
+        function goodbye(){
+            console.log("goodbye");
+        }
+        */
+
+sum(displayConsole,1,2);
+
+function sum(callback,x,y){
+     let result=x+y;
+     callback(result);
+}
+function displayConsole(result){
+    console.log(result);
+}
+    </script>
+</body>
+</html>

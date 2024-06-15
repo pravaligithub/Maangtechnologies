@@ -1,0 +1,70 @@
+<!-- 
+    DOM Navigation = the process of navigating through the structure of an HTML document using Javascript.
+
+    .firstElementChild
+    .lastElementChild
+    .nextElementSibling
+    .previousElementSibling
+    .parentElement
+    .children
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> Root Vegetables</h4>
+<ul id="veg">
+    <li>Beetroots</li>    
+    <li id="carrot">carrot</li> 
+    <li id="pumpkin">pumpkin</li> 
+    <li>brinjal</li> 
+</ul>
+<h4>Non Root Vegetables</h4>
+<ul id="tables">
+<li>Brocoli</li>    
+<li id="celery">celery</li> 
+<li>tomatoes</li> 
+<li>onions</li> 
+</ul>
+<script>
+    const element =document.getElementById("veg");
+    const child=element.firstElementChild;
+    child.style.backgroundColor="green";
+
+    const elements =document.getElementById("tables");
+    const childs=elements.lastElementChild;
+    childs.style.backgroundColor="blue";
+
+    const elem =document.querySelectorAll("ul");
+    let e;
+    for(e of elem){
+   const el=e.lastElementChild;
+    el.style.backgroundColor="red";
+    }
+    
+    const next=document.getElementById("celery");
+    const n=next.nextElementSibling;
+    n.style.backgroundColor="yellow";
+    
+    const nexts=document.getElementById("pumpkin");
+    const ne=nexts.previousElementSibling;
+    ne.style.backgroundColor="pink";
+    
+    const parent=document.getElementById("carrot");
+    const p=parent.parentElement;
+    p.style.backgroundColor="grey";
+    
+    const parents=document.getElementById("celery");
+    const pa=parents.children;
+    pa.style.backgroundColor="black";
+    
+    
+    
+    </script>
+</body>
+</html>

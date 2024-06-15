@@ -1,0 +1,30 @@
+<!-- 
+ES6 Modules=
+A external file that contains reusable code that can be imported into other javascript files.
+Write reusable code for many diferent apps.can contain variables,classes,functions..
+and more introduced as part of ECMAScript 2015 update 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+   <script type="module">
+    import {PI,getCircumference,getArea,getVolume}from './mathUtil.js';
+        console.log(PI);
+        const circumference=getCircumference(10);
+        const area=getArea(10);
+        const volume=getVolume(10);
+
+        console.log(`${circumference.toFixed(2)}cm`);
+        console.log(`${area.toFixed(2)}cm^2`);
+        console.log(`${volume.toFixed(2)}cm^3`);
+   </script> 
+</body>
+</html>

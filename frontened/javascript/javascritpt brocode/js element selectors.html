@@ -1,0 +1,88 @@
+<!-- 
+    element selectors- Methods used to target and manipulate HTML elements
+     They allow you to select one or multiple HTML elements from the DOM(document object Model)
+
+     1.document.getElementById() element or null
+     2.document.getElementsByClassName()  HTML collection
+     3.document.getElementsByTagName()   HTML collection
+     4.document.querySelector()
+     5.document.querySelectorAll()     Nodelist
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size:1.75em;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="food">Food for us</h1>
+
+    <div class="fruits">Apple</div>
+    <div class="fruits">Mango</div>
+    <div class="fruits">Orange</div>
+
+    <h4>
+        Root Vegetables
+    </h4>
+<ul>
+    <li>Beetroots</li>    
+    <li>carrot</li> 
+    <li>pumpkin</li> 
+    <li>brinjal</li> 
+</ul>
+
+<h4>Non Root Vegetables</h4>
+<ul>
+<li>Brocoli</li>    
+<li>celery</li> 
+<li>tomatoes</li> 
+<li>onions</li> 
+</ul>
+
+    <script>
+
+        const food=document.getElementById("food");
+        food.style.backgroundColor="yellow";
+        food.style.textAlign="center";
+        console.log(food);
+
+      const fruits=document.getElementsByClassName("fruits");
+      let fruit;
+       for(fruit of fruits){
+        fruit.style.backgroundColor="red";
+        console.log(fruit);
+       }
+   
+       const h4=document.getElementsByTagName("h4");
+       let h;
+       for(h of h4){
+       h.style.backgroundColor="skyblue";
+        console.log(h);
+       }
+
+       const li=document.getElementsByTagName("li");
+       let l;
+       for(l of li){
+       l.style.backgroundColor="blue";
+        console.log(l);
+       }
+
+       const element=document.querySelector("#food");
+       element.style.backgroundColor="orange";
+       console.log("element");
+
+       const elements=document.querySelectorAll("");
+       elements.style.backgroundColor="green";
+       console.log("elements");
+    </script>
+</body>
+</html>

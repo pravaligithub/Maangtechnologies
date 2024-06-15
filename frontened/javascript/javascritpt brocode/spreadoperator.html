@@ -1,0 +1,36 @@
+<!--
+spread operator= allows an iterable such as an array or string 
+to be expanded into separate elements(unpacks the elements)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+</head>
+<body>
+    <script>
+        
+    /*    let num =[1,2,3,4,5];
+        console.log(num);
+        let max =Math.max(...num);
+        let min = Math.min(...num);
+
+        console.log(max);
+        console.log(min);
+
+        */
+/*
+        let user="Pravallika";
+        let letter= [...user].join("-");
+        console.log(letter);
+*/
+   
+let fruits= ["apple", "orange" , "banana" ,"hello"];
+let vegetables=["carrots","celery","potatoes"];
+let foods=[...fruits,...vegetables,"eggs","milk"];
+console.log(foods);
+
+    </script>
+</body>
+</html>

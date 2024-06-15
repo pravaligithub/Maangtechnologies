@@ -1,0 +1,27 @@
+<!--
+    constructor=special method for defining the properties and methods of objects
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+   function Car(make,model,year,color){
+    this.make=make,
+    this.model = model,
+    this.year=year,
+    this.color
+    this.drive=function(){console.log('you drive', this.model)}
+}
+
+const car=new Car("food","mushroom",2024,"red");
+const car2=new Car("chevroet","camro",2026,"silver");
+car.drive();
+</script> 
+</body>
+</html>

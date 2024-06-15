@@ -1,0 +1,39 @@
+<!-- 
+    class= provides a more structured and cleaner way to work with objects compared to 
+    traditional construcor function.
+    ex:static keyword,encapsulation,inheritance
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+class product {
+    constructor(name,price){
+        this.name = name;
+        this.price = price;
+    }
+displayProduct()
+{
+        console.log('product:',this.name);
+        console.log('price:',this.price);
+    }
+calculateTotal(sales){
+    return this.price+(this.price*sales);
+}
+}
+const sales=0.05;
+const prod1=new product("shirt",19);
+const prod2=new product("pants",22);
+
+prod2.displayProduct();
+const total=prod2.calculateTotal(sales);
+console.log("Total price",total.toFixed(2));
+
+</script>
+</body>
+</html>
